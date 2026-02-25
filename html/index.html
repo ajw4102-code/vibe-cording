@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JWFLIX — 현재 상영중</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <div class="nav-left">
+      <h1 class="logo">JWFLIX</h1>
+      <nav class="main-nav" aria-label="주요 탐색">
+        <a href="#" class="nav-link active">홈</a>
+        <a href="#" class="nav-link">영화</a>
+        <a href="#" class="nav-link">최근</a>
+      </nav>
+    </div>
+    <div class="nav-right">
+      <button class="profile" aria-label="프로필">프로필</button>
+    </div>
+  </header>
+
+  <main id="app" role="main">
+    <div class="container">
+      <section class="hero-banner" aria-label="추천 배너">
+        <div class="hero-inner">
+          <h2 class="hero-heading">오늘의 추천</h2>
+          <p class="hero-sub">지금 상영 중인 인기 영화를 만나보세요.</p>
+        </div>
+      </section>
+
+      <section class="movies-section" aria-label="현재 상영 중 영화">
+        <header class="section-header">
+          <h2 class="section-title">현재 상영 중</h2>
+        </header>
+        <div class="movie-grid" id="movieGrid" role="list"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© JWFLIX — 일부 콘텐츠는 TMDB에서 제공합니다.</p>
+    </div>
+  </footer>
+
+  <template id="movieTemplate">
+    <article class="movie-card" role="listitem">
+      <div class="poster-wrap">
+        <img class="poster" src="" alt="">
+        <div class="overlay">
+          <button class="play" aria-label="재생">▶ 재생</button>
+        </div>
+      </div>
+      <div class="movie-title"></div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
